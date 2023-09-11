@@ -34,7 +34,9 @@ def get_blurred_img(img_path):
     diff_filter[(denoise_diff < lower) | (upper < denoise_diff)] = 1
 
     filtered_img = 255 * diff_filter
-    cv2.imwrite('diff_filter.jpg', filtered_img)
+    
+    return filtered_img
+    #cv2.imwrite('diff_filter.jpg', filtered_img)
     
     
 
